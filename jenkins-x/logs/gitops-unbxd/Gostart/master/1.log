@@ -1,0 +1,108 @@
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-48bcf[0m
+{"level":"warn","ts":1568886893.3812492,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568886893.3815484,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-w22gf[0m
+{"level":"warn","ts":1568886894.3394868,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568886894.3405066,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-gitops-unbxd-gostart-maste-gbp6v[0m
+{"level":"warn","ts":1568886900.373878,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568886900.6179035,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/Gostart.git @ a0a19ae906b97a8c6b8bd4c3791adf4acd351d30 in path /workspace/source"}
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a0a19ae906b97a8c6b8bd4c3791adf4acd351d30
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/gostart/Chart.yaml to 0.0.1
+Updating repository in charts/gostart/values.yaml to 012629307706.dkr.ecr.us-west-2.amazonaws.com/************/gostart
+Updating tag in charts/gostart/values.yaml to 0.0.1
+Tag v0.0.1 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for ************-Gostart-master-1
+Applying changes 
+upserted PipelineResource ************-gostart-master for the git repository https://github.com/************/Gostart.git
+upserted Task ************-gostart-master-from-build-pack-1
+upserted Pipeline ************-gostart-master-1
+created PipelineRun ************-gostart-master-1
+created PipelineStructure ************-gostart-master-1
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-wsj4h[0m
+{"level":"warn","ts":1568886909.9350352,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568886909.9353662,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xkvdw[0m
+{"level":"warn","ts":1568886910.888806,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568886910.890049,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/gostart\""}
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-gitops-unbxd-gostart-master-8hpq5[0m
+{"level":"warn","ts":1568886916.939104,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568886917.171183,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/Gostart.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a0a19ae906b97a8c6b8bd4c3791adf4acd351d30
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/gostart main.go
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/gostart"]                      
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/09/19 09:55:22 pushed blob: sha256:35af062731c7f88a1059346ed01bae4adc7a7ab113175e0378db7d369a6e74a0
+2019/09/19 09:55:23 pushed blob: sha256:f319f18823526668854517f1b6da4acbd6f350d15b59f3896687f79c45442116
+2019/09/19 09:55:23 012629307706.dkr.ecr.us-west-2.amazonaws.com/************/gostart:0.0.1: digest: sha256:540f8fc7cdc24771b98c930674a4c2d60594a446d19391619196640be092f775 size: 428
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/gostart to an unshallow repository
+no previous commit version found so change diff unavailable
+
+Showing logs for build [32mgitops-unbxd-gostart-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file gostart-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 401 response: {"error":"unauthorized"}
+error: Failed to post chart to http://jenkins-x-chartmuseum:8080/api/charts due to response 401: {"error":"unauthorized"}
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-helm-release'. The execution of the pipeline has stopped.[0m
